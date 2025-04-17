@@ -97,6 +97,33 @@
             dateLabel.Text = selectedDate.ToString("dd MMMM yyyy");
         }
 
+        void OnPreviousDayClicked(object sender, EventArgs e)
+        {
+            selectDate.Date = selectDate.Date.AddDays(-1);
+            // manually trigger if needed:
+            onDatePickerSelected(sender, new DateChangedEventArgs(selectDate.Date, selectDate.Date));
+        }
+
+        void OnNextDayClicked(object sender, EventArgs e)
+        {
+            selectDate.Date = selectDate.Date.AddDays(1);
+            // manually trigger if needed:
+            onDatePickerSelected(sender, new DateChangedEventArgs(selectDate.Date, selectDate.Date));
+        }
+
+        private void OnDateLabelTapped(object sender, EventArgs e)
+        {
+            selectDate.Focus(); // Open the date picker
+        }
+
+        private void OnCalendarClicked(object sender, EventArgs e)
+        {
+            // Programmatically open the DatePicker when calendar icon is tapped
+            selectDate.Focus();
+        }
+
+
+
     }
 
 }
