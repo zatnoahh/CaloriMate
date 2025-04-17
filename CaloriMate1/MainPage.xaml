@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CaloriMate1.MainPage"
              Title="CalorieMate"
-             BackgroundColor="#E8F5E9">
+             BackgroundColor="White">
 
     <ScrollView>
         <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="#F9F9F9">
@@ -48,20 +48,45 @@
             <Frame CornerRadius="15" BackgroundColor="White" Padding="20" HasShadow="True">
                 <VerticalStackLayout Spacing="15">
 
-                    <Label Text="Food Name" FontAttributes="Bold" />
-                    <Entry x:Name="inputFood" Placeholder="e.g. Nasi Goreng" />
+                    <!-- Food Name -->
+                    <Label Text="🍽️ Food Name" FontAttributes="Bold" FontSize="16" TextColor="#333" />
+                    <Entry x:Name="inputFood"
+               Placeholder="e.g. Nasi Goreng"
+               FontSize="14"
+               HeightRequest="45"
+               TextColor="Black"
+               PlaceholderColor="#999"
+               Margin="0,-5,0,0"/>
 
-                    <Label Text="Calories (kcal)" FontAttributes="Bold" />
-                    <Entry x:Name="inputCalories" Placeholder="e.g. 400" Keyboard="Numeric" />
+                    <!-- Calories -->
+                    <Label Text="🔥 Calories (kcal)" FontAttributes="Bold" FontSize="16" TextColor="#333" />
+                    <Entry x:Name="inputCalories"
+               Placeholder="e.g. 400"
+               Keyboard="Numeric"
+               FontSize="14"
+               HeightRequest="45"
+               TextColor="Black"
+               PlaceholderColor="#999"
+               Margin="0,-5,0,0"/>
 
-                    <Label Text="Meal Time" FontAttributes="Bold" />
-                    <Picker x:Name="mealTimePicker">
-                        <Picker.Items>
-                            <x:String>Breakfast</x:String>
-                            <x:String>Lunch</x:String>
-                            <x:String>Dinner</x:String>
-                        </Picker.Items>
-                    </Picker>
+                    <!-- Meal Time -->
+                    <Label Text="🕒 Meal Time" FontAttributes="Bold" FontSize="16" TextColor="#333" />
+                    <Frame CornerRadius="12"
+               Padding="5"
+               BorderColor="#2196F3"
+               HasShadow="False"
+               HeightRequest="50">
+                        <Picker x:Name="mealTimePicker"
+                    Title="Select a meal"
+                    FontSize="14"
+                    TextColor="Black">
+                            <Picker.Items>
+                                <x:String>🍳 Breakfast</x:String>
+                                <x:String>🍱 Lunch</x:String>
+                                <x:String>🍝 Dinner</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
 
                     <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
                         <HorizontalStackLayout Spacing="5">
