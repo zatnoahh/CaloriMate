@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaloriMate1.AboutPage"
+             Title="About"
+             BackgroundColor="#F9F9F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Image Source="appicon1.png"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center" />
+
+            <Label Text="CaloriMate"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2E7D32" />
+
+            <Label Text="Version 1.0"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="#666" />
+
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="📱 About the App" FontAttributes="Bold" FontSize="18" />
+                    <Label Text="CaloriMate is a simple calorie tracking app that helps users log food intake, monitor daily calorie consumption, and maintain healthy habits. It includes features like a food log, calorie summary, and useful health information." />
+
+                    <Label Text="👤 Developer" FontAttributes="Bold" FontSize="18" Margin="0,15,0,0"/>
+                    <Label Text="Name: Muhammad Izzat Syahmi Bin Norsham" />
+                    <Label Text="Student ID: SW01082298" />
+                    <Label Text="Course: Mobile App Development" />
+                    
+                    <Label Text="📌 Project Motivation" FontAttributes="Bold" FontSize="18" Margin="0,15,0,0"/>
+                    <Label Text="This project is developed as part of the Mobile App Development course to demonstrate practical application of .NET MAUI and Firebase integration. The goal is to promote health awareness through simple and intuitive mobile solutions." />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

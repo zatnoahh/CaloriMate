@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CaloriMate1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CaloriMate1"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="#E3F2FD"
+    Shell.TitleColor="Black"
+    Shell.FlyoutBackgroundColor="White"
+    Title="CaloriMate">
+
+    <!-- Custom Header -->
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#2196F3" Padding="10" HeightRequest="140">
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="4">
+                <Image Source="appicon1.png"
+                   WidthRequest="60"
+                   HeightRequest="60"
+                   HorizontalOptions="Center" />
+                <Label Text="CaloriMate"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0" />
+                <Label Text="Healthy Lifestyle Tracker"
+                   FontSize="12"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+
+    <!-- Navigation Items with Icons -->
+    <ShellContent Title="Food Log"
+                  ContentTemplate="{DataTemplate local:MainPage}"
+                  Route="MainPage"
+                  Icon="food_icon.png" />
+
+    <ShellContent Title="Record"
+                  ContentTemplate="{DataTemplate local:Record}"
+                  Route="Record"
+                  Icon="record_icon.png" />
+
+    <ShellContent Title="Information"
+                  ContentTemplate="{DataTemplate local:InfoPage}"
+                  Route="InfoPage"
+                  Icon="news.png" />
+
+    <ShellContent Title="About"
+              ContentTemplate="{DataTemplate local:AboutPage}"
+              Route="AboutPage"
+              Icon="info_icon.png" />
+
+
+</Shell>
+

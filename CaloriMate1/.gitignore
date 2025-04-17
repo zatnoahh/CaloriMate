@@ -1,0 +1,11 @@
+﻿# Build and temp files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.apk
+*.exe
+*.log
+.vscode/

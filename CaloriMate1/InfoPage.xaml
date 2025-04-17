@@ -1,0 +1,82 @@
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaloriMate1.InfoPage"
+             Title="Information"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="#F4F4F4">
+
+            <Label Text="🍎 Calories and Healthy Eating"
+               FontSize="26"
+               FontAttributes="Bold"
+               TextColor="#2E7D32"
+               HorizontalOptions="Center" />
+
+            <!-- SECTION 1: What Are Calories -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="🥗 What Are Calories?" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Calories are units of energy from food. Your body needs them for essential functions like breathing, thinking, and physical activity." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- SECTION 2: Daily Calorie Needs -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="🔥 Daily Calorie Needs" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="• Men: ~2500 kcal/day (active)" />
+                    <Label Text="• Women: ~2000 kcal/day (active)" />
+                    <Label Text="Note: It varies by age, activity level, and health goal." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- SECTION 3: Calories in Common Foods -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="🍽️ Calories in Common Foods" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="• Apple (1 medium): 95 kcal" />
+                    <Label Text="• Chicken breast (100g): 165 kcal" />
+                    <Label Text="• Nasi Lemak (1 pack): ~400 kcal" />
+                    <Label Text="• Fried Noodles: ~350 kcal" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- SECTION 4: Weight Management Tips -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="⚖️ Weight Management Tips" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="• Lose weight: Burn more than you eat (caloric deficit)" />
+                    <Label Text="• Gain weight: Eat more than you burn" />
+                    <Label Text="• Track your intake consistently for best results" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- SECTION 5: Balanced Eating -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="🥦 Balanced Eating" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Eat a balance of:" />
+                    <Label Text="✔ Protein (chicken, fish, tofu)" />
+                    <Label Text="✔ Carbs (rice, oats, fruits)" />
+                    <Label Text="✔ Healthy fats (nuts, avocado, olive oil)" />
+                    <Label Text="✔ Water (8 glasses/day)" />
+                    <Label Text="Avoid excess sugar and processed food." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- SECTION 6: Common Myths -->
+            <Frame BackgroundColor="White" CornerRadius="12" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="🚫 Common Myths" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="❌ Skipping meals helps lose weight — No! It can slow metabolism." />
+                    <Label Text="❌ Carbs are bad — Not true. Choose complex carbs like whole grains." />
+                    <Label Text="❌ Eating after 8PM causes weight gain — Total calories matter more than timing." />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

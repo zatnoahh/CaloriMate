@@ -1,0 +1,118 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaloriMate1.MainPage"
+             Title="CalorieMate"
+             BackgroundColor="#E8F5E9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="20" BackgroundColor="#F9F9F9">
+
+            <!-- DATE AND TOTAL CALORIES HEADER -->
+            <Frame BackgroundColor="White"
+       CornerRadius="12"
+       Padding="12"
+       Margin="0,5"
+       HasShadow="True"
+       HorizontalOptions="Center"
+       WidthRequest="280">
+
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+
+                    <Label x:Name="dayLabel"
+               Text="Today"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="#1E88E5"
+               HorizontalOptions="Center" />
+
+                    <Label x:Name="dateLabel"
+               FontSize="14"
+               FontAttributes="None"
+               TextColor="#555"
+               HorizontalOptions="Center" />
+
+                    <Label x:Name="totalCaloriesLabel"
+               Text="Total Calories: 0 kcal"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="#D32F2F"
+               HorizontalOptions="Center"
+               Margin="0,8,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+
+            <!-- FOOD ENTRY SECTION -->
+            <Frame CornerRadius="15" BackgroundColor="White" Padding="20" HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="Food Name" FontAttributes="Bold" />
+                    <Entry x:Name="inputFood" Placeholder="e.g. Nasi Goreng" />
+
+                    <Label Text="Calories (kcal)" FontAttributes="Bold" />
+                    <Entry x:Name="inputCalories" Placeholder="e.g. 400" Keyboard="Numeric" />
+
+                    <Label Text="Meal Time" FontAttributes="Bold" />
+                    <Picker x:Name="mealTimePicker">
+                        <Picker.Items>
+                            <x:String>Breakfast</x:String>
+                            <x:String>Lunch</x:String>
+                            <x:String>Dinner</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                        <HorizontalStackLayout Spacing="5">
+                            <Image Source="calendaricon.png" WidthRequest="20" HeightRequest="20"/>
+                            <Label Text="Date:" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <DatePicker x:Name="selectDate"
+                                DateSelected="onDatePickerSelected"
+                                Format="dd/MM/yyyy"
+                                WidthRequest="130"
+                                HeightRequest="45" />
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- FEEDBACK -->
+            <Label x:Name="outputEntry"
+               Text="No Entry Yet"
+               FontAttributes="Italic"
+               TextColor="#888"
+               FontSize="14"
+               HorizontalOptions="Center"
+               Margin="0,10,0,0"/>
+
+            <!-- ACTION BUTTONS -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="Add Entry"
+                    Clicked="OnAddClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    WidthRequest="110"
+                    CornerRadius="12" />
+
+                <Button Text="Reset"
+                    Clicked="OnReset"
+                    BackgroundColor="#E0E0E0"
+                    TextColor="Black"
+                    WidthRequest="90"
+                    CornerRadius="12" />
+            </HorizontalStackLayout>
+
+            <Button x:Name="saveButton"
+                Text="Save Record"
+                Clicked="OnSaveRecord"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                CornerRadius="12"
+                Margin="0,10,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
